@@ -4,25 +4,14 @@
 using namespace std;
 
 void PrintIntro();
+string GetGuessAndPrintBack();
 
 //The entry point for the app
 int main() {
 	PrintIntro();
 
-	// get guess from the player
-	cout << "Enter your guess: ";
-	string Guess = "";
-	getline(cin, Guess);
-
-	// repeat the guess back to player
-	cout << "Your guess was: " << Guess << endl;
-
-	// get guess from the player
-	cout << "Enter your guess: ";
-	getline(cin, Guess);
-
-	// repeat the guess back to player
-	cout << "Your guess was: " << Guess << endl;
+	GetGuessAndPrintBack();
+	GetGuessAndPrintBack();
 
 	cout << endl;
 	return 0;
@@ -35,4 +24,15 @@ void PrintIntro() {
 	cout << "Can you guess the " << WORD_LENGTH;
 	cout << " letter isogram I'm thinking of?\n";
 	return;
+}
+
+// get guess from the player
+string GetGuessAndPrintBack() {
+	cout << "Enter your guess: ";
+	string Guess = "";
+	getline(cin, Guess);
+
+	// repeat the guess back to player
+	cout << "Your guess was: " << Guess << endl;
+	return Guess;
 }
