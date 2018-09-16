@@ -3,12 +3,11 @@
 
 using namespace std;
 
+void PrintIntro();
+
+//The entry point for the app
 int main() {
-	// introduce game
-	constexpr int WORD_LENGTH = 9;
-	cout << "Welcome to Bulls and Cows, a fun word game.\n";
-	cout << "Can you guess the " << WORD_LENGTH;
-	cout << " letter isogram I'm thinking of?\n";
+	PrintIntro();
 
 	// get guess from the player
 	cout << "Enter your guess: ";
@@ -27,4 +26,13 @@ int main() {
 
 	cout << endl;
 	return 0;
+}
+
+void PrintIntro() {
+	// introduce game
+	constexpr int WORD_LENGTH = 9;
+	cout << "Welcome to Bulls and Cows, a fun word game.\n";
+	cout << "Can you guess the " << WORD_LENGTH;
+	cout << " letter isogram I'm thinking of?\n";
+	return;
 }
